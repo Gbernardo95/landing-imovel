@@ -1,98 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Imóvel dos Sonhos - Landing Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .container {
-      background: #fff;
-      padding: 20px 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 100%;
-    }
-    h1 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 6px;
-      margin-bottom: 20px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    input {
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    button {
-      background-color: #2ecc71;
-      border: none;
-      color: white;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #27ae60;
-    }
-    .success-message {
-      display: none;
-      color: #27ae60;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 15px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Seu Novo Lar no Rio de Janeiro</h1>
-    <img src="https://via.placeholder.com/400x250?text=Imóvel+dos+Sonhos" alt="Imóvel dos Sonhos" />
-    <form id="leadForm">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu melhor email" required />
-      <input type="tel" name="telefone" placeholder="Telefone com DDD" required />
-      <button type="submit">Quero Saber Mais</button>
-    </form>
-    <div class="success-message" id="successMessage">
-      Obrigado! Entraremos em contato em breve.
-    </div>
-  </div>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LANÇAMENTO | Sky Mario Guimarães</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Botão WhatsApp fixo */
+      #whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        z-index: 1000;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #whatsapp-btn:hover {
+        background-color: #128c4a;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- HERO -->
+    <section class="bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('https://i.ibb.co/VRR1T6q/Whats-App-Image-2025-06-09-at-16-30-39.webp');">
+      <div class="bg-black bg-opacity-60 p-8 rounded-xl text-center text-white max-w-2xl">
+        <h1 class="text-4xl font-bold mb-4">Sky Mario Guimarães</h1>
+        <p class="text-lg mb-6">O melhor lançamento do Méier com condições imperdíveis. 2 e 3 quartos com varanda e lazer completo!</p>
+        <a href="#form" class="bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition">Quero saber mais</a>
+      </div>
+    </section>
 
-  <script>
-    const form = document.getElementById('leadForm');
-    const successMessage = document.getElementById('successMessage');
+    <!-- DIFERENCIAIS -->
+    <section class="py-16 bg-gray-100 text-center">
+      <h2 class="text-3xl font-bold mb-10">Diferenciais do Empreendimento</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white p-6 rounded-xl shadow-md">🚗 1 ou 2 vagas de garagem</div>
+        <div class="bg-white p-6 rounded-xl shadow-md">🏊 Lazer completo na cobertura</div>
+        <div class="bg-white p-6 rounded-xl shadow-md">📍 Localização estratégica no Méier</div>
+        <div class="bg-white p-6 rounded-xl shadow-md">🔑 Segurança 24h</div>
+        <div class="bg-white p-6 rounded-xl shadow-md">🌇 Vista panorâmica</div>
+      </div>
+    </section>
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Aqui você pode integrar com um serviço de backend ou API de CRM
-      
-      form.style.display = 'none';
-      successMessage.style.display = 'block';
-    });
-  </script>
-</body>
+    <!-- GALERIA -->
+    <section class="py-16">
+      <h2 class="text-3xl font-bold text-center mb-10">Galeria de Imagens</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto px-4">
+        <img src="https://i.ibb.co/9kfdfgpp/Whats-App-Image-2025-06-09-at-16-30-39-1.webp" class="rounded-xl shadow-md" />
+        <img src="https://i.ibb.co/bjwCGWcL/Whats-App-Image-2025-06-09-at-17-45-20-1.jpg" class="rounded-xl shadow-md" />
+        <img src="https://i.ibb.co/Zz625wsx/Whats-App-Image-2025-06-09-at-17-45-19.jpg" class="rounded-xl shadow-md" />
+        <img src="https://i.ibb.co/DPWBhv5j/Whats-App-Image-2025-06-09-at-17-45-20.jpg" class="rounded-xl shadow-md" />
+      </div>
+    </section>
+
+    <!-- MAPA -->
+    <section class="py-16 bg-gray-100 text-center">
+      <h2 class="text-3xl font-bold mb-6">Localização Privilegiada</h2>
+      <div class="max-w-4xl mx-auto px-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.0624170907376!2d-43.282778999999995!3d-22.946233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9966f8ab29dd8b%3A0x4e0d3d9d3f9e9f2!2sRua%20Mario%20Guimaraes%2C%20Meier%20-%20Rio%20de%20Janeiro%2C%20RJ!5e0!3m2!1spt-BR!2sbr!4v1717956000000"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          class="rounded-xl shadow-md"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section id="form" class="py-16 bg-yellow-400 text-black text-center">
+      <h2 class="text-3xl font-bold mb-4">Fale com um corretor agora mesmo!</h2>
+      <p class="mb-8">Preencha seus dados e receba condições exclusivas.</p>
+      <!-- FORMULÁRIO REMOVIDO, AGORA USAMOS BOTÃO DIRETO PARA WHATSAPP -->
+      <a href="https://wa.me/5521SEUNUMERO?text=Olá,%20quero%20saber%20mais%20sobre%20o%20Sky%20Mario%20Guimarães." target="_blank" class="inline-block bg-black text-white py-3 px-8 rounded-lg font-semibold hover:bg-gray-800 transition">Chamar no WhatsApp</a>
+    </section>
+
+    <!-- BOTÃO WHATSAPP FIXO -->
+    <a id="whatsapp-btn" href="https://wa.me/5521SEUNUMERO?text=Olá,%20quero%20saber%20mais%20sobre%20o%20Sky%20Mario%20Guimarães." target="_blank" aria-label="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
+        <path d="M20.52 3.48a11.82 11.82 0 0 0-16.7 0 11.88 11.88 0 0 0-3.38 8.37 11.94 11.94 0 0 0 2.34 6.49l-1.43 4.94 5.06-1.33a11.83 11.83 0 0 0 5.4 1.32h.01a11.88 11.88 0 0 0 8.35-3.43 11.8 11.8 0 0 0 3.46-8.35 11.84 11.84 0 0 0-3.41-8.01Zm-8.08 16.54a7.4 7.4 0 0 1-3.83-1.08l-.27-.16-3.01.79.8-2.93-.18-.3a7.33 7.33 0 0 1-1.14-4.19 7.4 7.4 0 0 1 12.78-5.13 7.38 7.38 0 0 1 1.94 5.18 7.4 7.4 0 0 1-7.09 7.82Zm4.11-4.99c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.51.12s-.59.75-.72.9c-.13.15-.26.17-.49.06a6.14 6.14 0 0 1-1.8-1.11 6.91 6.91 0 0 1-1.29-1.6c-.14-.23-.02-.35.1-.47.1-.1.23-.27.34-.4.12-.14.16-.24.24-.4.08-.15.04-.28-.02-.4-.06-.12-.51-1.24-.7-1.7-.18-.44-.37-.38-.51-.38-.13 0-.28 0-.43 0-.15 0-.4.06-.61.28-.21.23-.8.78-.8 1.9 0 1.12.82 2.2.93 2.36.12.17 1.62 2.47 3.93 3.47a16.6 16.6 0 0 0 2.3 1.04c.3.13.6.11.83.07.26-.05 1.36-.55 1.55-1.08.2-.53.2-.98.14-1.08-.05-.1-.21-.15-.44-.27Z"/>
+      </svg>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 text-sm text-gray-500">
+      © 2025 Sky Mario Guimarães - Todos os direitos reservados.
+    </footer>
+  </body>
 </html>
